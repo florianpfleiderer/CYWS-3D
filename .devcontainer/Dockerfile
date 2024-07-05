@@ -59,14 +59,11 @@ RUN touch ~/.bashrc && echo "conda activate cyws3d" >> ~/.bashrc
 # RUN wget https://thor.robots.ox.ac.uk/cyws-3d/cyws-3d.ckpt.gz
 # RUN gzip -d cyws-3d.ckpt.gz
 
-# # Copy folders and files that wont change often
+## Uncomment this section if you do not use the devcontainer extension in vscode
 # COPY ../demo_data/ demo_data/
 # COPY ../modules/ modules/
 # COPY ../SuperGluePretrainedNetwork/ SuperGluePretrainedNetwork/
-# # Copy folders and files that will change often
 # COPY ../config.yml inference.py utils.py ./
-# COPY ../my_data/ my_data/
-# COPY ../predictions/ predictions/
 
 # Set the default command to run when the container starts
 CMD ["bash"]
